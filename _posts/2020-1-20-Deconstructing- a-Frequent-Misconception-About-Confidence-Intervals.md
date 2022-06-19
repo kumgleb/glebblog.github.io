@@ -5,7 +5,7 @@ title: Deconstructing a Frequent Misconception About Confidence Intervals
 
 ![_config.yml]({{ site.baseurl }}/images/confidence_intervals/logo.png)
 
-### Introduction
+### Introduction:
 Confidence intervals are commonly used as a routine approach of interval estimation. If you’ve ever applied this approach, you may have come across this statement:
 
 * For a 90% confidence interval, there is a 90% probability that a true parameter lies within that interval. <br>
@@ -14,7 +14,7 @@ Seems legit, doesn’t it? At least, it looked legit to me, at first. Well, it�
 
 So lets’s go back to square one and apply confidence intervals in a simple context and realize why this common misinterpretation is false. <br>
 
-### Derivation of intervals
+### Derivation of intervals:
 Let’s say we want to estimate the mean height of residents living in a city. Suppose that there are one million people living in this city, and their heights are normally distributed. Let’s assume that we know the true distribution parameters, say, the mean height is 1.8m and the standard deviation is 0.1m. These are the population parameters, which we usually do not know and want to estimate by our measurements.
 
 | ![space-1.jpg](/images/confidence_intervals/img_1.png) | 
@@ -48,17 +48,17 @@ Different subsets of 50 people will produce different estimations, and that is w
 <br>
 where **s** is an estimated standard deviation of the sample:
 <br>
-![Img_1](/images/confidence_intervals/eq_3.png#center)
+![Img_1](/images/confidence_intervals/eq_4.png#center)
 <br>
 For Subset-1, we get the following:
 
 <br>
-![Img_1](/images/confidence_intervals/eq_4.png#center)
+![Img_1](/images/confidence_intervals/eq_5.png#center)
 <br>
 Thus, for the mean height distribution based on Subset-1 we get:
 
 <br>
-![Img_1](/images/confidence_intervals/eq_5.png#center)
+![Img_1](/images/confidence_intervals/eq_6.png#center)
 <br>
 
 Let’s plot this distribution:
@@ -80,7 +80,7 @@ We expect that the mean height value would follow the same distribution if we re
 We would get the same result if we used a commonly applied formula and the Z-table:
 
 <br>
-![Img_1](/images/confidence_intervals/eq_6.png#center)
+![Img_1](/images/confidence_intervals/eq_7.png#center)
 <br>
 
 So how can we interpret that 90% confidence level for the interval above? <br>
@@ -94,7 +94,7 @@ Taking the way this interval was formed into account, we may conclude that the i
 But such expectations are sure to fail to meet the reality. As we can see, the number of measurements (red dashed lines) falling outside of the estimated 90% interval is way bigger than 10. The reason is that we have calculated our interval based on some random sample mean. 90% of the observations will fall within the estimated interval only if it matches with the true one. We can plot the true interval as we know the true parameters:
 
 <br>
-![Img_1](/images/confidence_intervals/eq_7.png#center)
+![Img_1](/images/confidence_intervals/eq_8.png#center)
 <br>
 
 | ![Img_1](/images/confidence_intervals/img_6.png#center) | 
