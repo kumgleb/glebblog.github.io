@@ -9,7 +9,7 @@ name: Gleb Kumichev
 description: Machine Learning R&D
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: # https://raw.githubusercontent.com/glebblog/master/images/av.png
+avatar: https://raw.githubusercontent.com/glebblog/master/images/av.png
 
 #
 # Flags below are optional
@@ -18,12 +18,12 @@ avatar: # https://raw.githubusercontent.com/glebblog/master/images/av.png
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: # iamglebk@gmail.com
+  email: iamglebk@gmail.com
   facebook:
   flickr:
-  github: # kumgleb
+  github: kumgleb
   instagram:
-  linkedin: # gleb-kumichev
+  linkedin: gleb-kumichev
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: 
