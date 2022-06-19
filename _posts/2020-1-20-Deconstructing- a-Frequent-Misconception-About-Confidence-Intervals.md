@@ -5,6 +5,7 @@ title: Deconstructing a Frequent Misconception About Confidence Intervals
 
 ![_config.yml]({{ site.baseurl }}/images/confidence_intervals/logo.png)
 
+### Introduction
 Confidence intervals are commonly used as a routine approach of interval estimation. If you’ve ever applied this approach, you may have come across this statement:
 
 * For a 90% confidence interval, there is a 90% probability that a true parameter lies within that interval. <br>
@@ -17,7 +18,8 @@ So lets’s go back to square one and apply confidence intervals in a simple con
 Let’s say we want to estimate the mean height of residents living in a city. Suppose that there are one million people living in this city, and their heights are normally distributed. Let’s assume that we know the true distribution parameters, say, the mean height is 1.8m and the standard deviation is 0.1m. These are the population parameters, which we usually do not know and want to estimate by our measurements.
 
 <br>
-![Img_1](/images/confidence_intervals/img_1.png)
+![Img_1](/images/confidence_intervals/img_1.png#center)
+{:.image-caption}
 *Distribution of heights for all the people living in the city.*
 <br>
 
@@ -26,7 +28,8 @@ Of course, if we measure the height of a million people, we can get the true mea
 Let’s suppose we take a subset of 50 random people and measure their height. These 50 people are a sample of our population. Let’s give them a code name “Subset-1”. We can estimate the mean height of all the people in the city by just calculating the mean height of Subset-1 (the sample mean). By doing so, we would get a so-called **point estimation**.
 
 <br>
-![Img_1](/images/confidence_intervals/img_2.png)
+![Img_1](/images/confidence_intervals/img_2.png#center)
+{:.image-caption}
 *Point estimation for the mean height of 50 random people.*
 <br>
 
@@ -37,38 +40,40 @@ There is no way to determine which subset would give us a better result. In orde
 #### Let’s find such an interval:
 This is an estimation of the true mean height (the sample mean): 
 <br>
-![Img_1](/images/confidence_intervals/eq_1.png)
+![Img_1](/images/confidence_intervals/eq_1.png#center)
 <br>
 Different subsets of 50 people will produce different estimations, and that is why the mean height is also a random variable with some distribution. That is a sampling distribution of the sample mean with parameters:
 <br>
-![Img_1](/images/confidence_intervals/eq_2.png)
+![Img_1](/images/confidence_intervals/eq_2.png#center)
 <br>
 where **s** is an estimated standard deviation of the sample:
 <br>
-![Img_1](/images/confidence_intervals/eq_3.png)
+![Img_1](/images/confidence_intervals/eq_3.png#center)
 <br>
 For Subset-1, we get the following:
 
 <br>
-![Img_1](/images/confidence_intervals/eq_4.png)
+![Img_1](/images/confidence_intervals/eq_4.png#center)
 <br>
 Thus, for the mean height distribution based on Subset-1 we get:
 
 <br>
-![Img_1](/images/confidence_intervals/eq_5.png)
+![Img_1](/images/confidence_intervals/eq_5.png#center)
 <br>
 
 Let’s plot this distribution:
 
 <br>
-![Img_1](/images/confidence_intervals/img_3.png)
+![Img_1](/images/confidence_intervals/img_3.png#center)
+{:.image-caption}
 *An estimated distribution of the mean height for Subset-1.*
 <br>
 
 We expect that the mean height value would follow the same distribution if we repeat our measurements with a different subset of people. For example, 90% of such measurements will match the interval [1.757; 1.803]. Let’s zoom in on the x axis and see it in the graph:
 
 <br>
-![Img_1](/images/confidence_intervals/img_4.png)
+![Img_1](/images/confidence_intervals/img_4.png#center)
+{:.image-caption}
 *Estimated distribution of the mean height of Subset-1.*
 <br>
 
@@ -76,7 +81,7 @@ We expect that the mean height value would follow the same distribution if we re
 We would get the same result if we used a commonly applied formula and the Z-table:
 
 <br>
-![Img_1](/images/confidence_intervals/eq_6.png)
+![Img_1](/images/confidence_intervals/eq_6.png#center)
 <br>
 
 So how can we interpret that 90% confidence level for the interval above? <br>
@@ -84,25 +89,28 @@ So how can we interpret that 90% confidence level for the interval above? <br>
 Taking the way this interval was formed into account, we may conclude that the interval covers 90% of the mean height measurements for 50 random people. So one can expect to find the mean height inside such an interval in 90% of all the future measurements. We can check it by drawing 100 random subsets of 50 people each, calculating the mean height and comparing it with our distribution:
 
 <br>
-![Img_1](/images/confidence_intervals/img_5.png)
+![Img_1](/images/confidence_intervals/img_5.png#center)
+{:.image-caption}
 *Red dashed lines — result of 100 repeatedly calculated mean heights by 50 random sampled people.*
 <br>
 
 But such expectations are sure to fail to meet the reality. As we can see, the number of measurements (red dashed lines) falling outside of the estimated 90% interval is way bigger than 10. The reason is that we have calculated our interval based on some random sample mean. 90% of the observations will fall within the estimated interval only if it matches with the true one. We can plot the true interval as we know the true parameters:
 
 <br>
-![Img_1](/images/confidence_intervals/eq_7.png)
+![Img_1](/images/confidence_intervals/eq_7.png#center)
 <br>
 
 <br>
-![Img_1](/images/confidence_intervals/img_6.png)
+![Img_1](/images/confidence_intervals/img_6.png#center)
+{:.image-caption}
 *Red dashed lines — result of 100 estimations, the mean heights of 50 random people.*
 <br>
 
 But what will happen if we repeat our measurements and build a confidence interval for, say, 20 randomly sampled subsets of 50 people each? Here is what we will get:
 
 <br>
-![Img_1](/images/confidence_intervals/img_7.png)
+![Img_1](/images/confidence_intervals/img_7.png#center)
+{:.image-caption}
 *Blue lines — 90% confidence intervals for 20 random samples of 50 people each. Red dashed line — the true mean.*
 <br>
 
@@ -128,6 +136,8 @@ If you come across or need to calculate a confidence interval [a; b] with confid
 * A confidence level α is NOT a percentage of the sample data falling within [a; b];
 * A confidence level α is NOT a percentage of experiments where the true mean would fall within [a; b].
 <br>
+
 Confidence level α means that by conducting repeated interval calculations using different samples, we will get a percentage of confidence intervals, including a true population parameter that tends towards α.
+
 <br>
 If you find some confidence intervals conceptions to be confusing, I encourage you to check out other misinterpretations and some research on them featured in this Wikipedia article [[3]](https://en.wikipedia.org/wiki/Confidence_interval#Meaning_and_interpretation).
