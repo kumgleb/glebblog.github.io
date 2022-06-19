@@ -17,12 +17,6 @@ So lets’s go back to square one and apply confidence intervals in a simple con
 ### Derivation of intervals
 Let’s say we want to estimate the mean height of residents living in a city. Suppose that there are one million people living in this city, and their heights are normally distributed. Let’s assume that we know the true distribution parameters, say, the mean height is 1.8m and the standard deviation is 0.1m. These are the population parameters, which we usually do not know and want to estimate by our measurements.
 
-<br>
-![Img_1](/images/confidence_intervals/img_1.png#center)
-{:.image-caption}
-*Distribution of heights for all the people living in the city.*
-<br>
-
 | ![space-1.jpg](/images/confidence_intervals/img_1.png) | 
 |:--:| 
 | *Distribution of heights for all the people living in the city.* |
@@ -31,11 +25,11 @@ Of course, if we measure the height of a million people, we can get the true mea
 
 Let’s suppose we take a subset of 50 random people and measure their height. These 50 people are a sample of our population. Let’s give them a code name “Subset-1”. We can estimate the mean height of all the people in the city by just calculating the mean height of Subset-1 (the sample mean). By doing so, we would get a so-called **point estimation**.
 
-<br>
-![Img_1](/images/confidence_intervals/img_2.png#center)
-{:.image-caption}
-*Point estimation for the mean height of 50 random people.*
-<br>
+
+| ![Img_1](/images/confidence_intervals/img_2.png#center) | 
+|:--:| 
+| *Point estimation for the mean height of 50 random people.* |
+
 
 However, if we take another random subset of 50 people, the value of the mean height would differ. Each random subset would give us a different result. How should we choose the one and only subset that would result in a better estimation of the true value? <br>
 
@@ -43,9 +37,13 @@ There is no way to determine which subset would give us a better result. In orde
 
 #### Let’s find such an interval:
 This is an estimation of the true mean height (the sample mean): 
+
 <br>
 ![Img_1](/images/confidence_intervals/eq_1.png#center)
 <br>
+
+| ![Img_1](/images/confidence_intervals/eq_1.png#center) | 
+
 Different subsets of 50 people will produce different estimations, and that is why the mean height is also a random variable with some distribution. That is a sampling distribution of the sample mean with parameters:
 <br>
 ![Img_1](/images/confidence_intervals/eq_2.png#center)
