@@ -23,6 +23,10 @@ Let’s say we want to estimate the mean height of residents living in a city. S
 *Distribution of heights for all the people living in the city.*
 <br>
 
+| ![space-1.jpg](/images/confidence_intervals/img_1.png) | 
+|:--:| 
+| *Distribution of heights for all the people living in the city.* |
+
 Of course, if we measure the height of a million people, we can get the true mean value, and there is no need for any estimation at all. But in reality, we usually carry out a limited experiment and want to estimate real parameters using some limited sample from the whole population. <br>
 
 Let’s suppose we take a subset of 50 random people and measure their height. These 50 people are a sample of our population. Let’s give them a code name “Subset-1”. We can estimate the mean height of all the people in the city by just calculating the mean height of Subset-1 (the sample mean). By doing so, we would get a so-called **point estimation**.
