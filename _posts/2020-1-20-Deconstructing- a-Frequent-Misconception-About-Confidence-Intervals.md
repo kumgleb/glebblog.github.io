@@ -42,8 +42,6 @@ This is an estimation of the true mean height (the sample mean):
 ![Img_1](/images/confidence_intervals/eq_1.png#center)
 <br>
 
-| ![Img_1](/images/confidence_intervals/eq_1.png#center) | 
-
 Different subsets of 50 people will produce different estimations, and that is why the mean height is also a random variable with some distribution. That is a sampling distribution of the sample mean with parameters:
 <br>
 ![Img_1](/images/confidence_intervals/eq_2.png#center)
@@ -65,19 +63,18 @@ Thus, for the mean height distribution based on Subset-1 we get:
 
 Let’s plot this distribution:
 
-<br>
-![Img_1](/images/confidence_intervals/img_3.png#center)
-{:.image-caption}
-*An estimated distribution of the mean height for Subset-1.*
-<br>
+| ![Img_1](/images/confidence_intervals/img_3.png#center) | 
+|:--:| 
+| *An estimated distribution of the mean height for Subset-1.* |
+
 
 We expect that the mean height value would follow the same distribution if we repeat our measurements with a different subset of people. For example, 90% of such measurements will match the interval [1.757; 1.803]. Let’s zoom in on the x axis and see it in the graph:
 
-<br>
-![Img_1](/images/confidence_intervals/img_4.png#center)
-{:.image-caption}
-*Estimated distribution of the mean height of Subset-1.*
-<br>
+
+| ![Img_1](/images/confidence_intervals/img_4.png#center) | 
+|:--:| 
+| *Estimated distribution of the mean height of Subset-1.* |
+
 
 **That is a 90% confidence interval for Subset-1.** <br>
 We would get the same result if we used a commonly applied formula and the Z-table:
@@ -90,11 +87,9 @@ So how can we interpret that 90% confidence level for the interval above? <br>
 
 Taking the way this interval was formed into account, we may conclude that the interval covers 90% of the mean height measurements for 50 random people. So one can expect to find the mean height inside such an interval in 90% of all the future measurements. We can check it by drawing 100 random subsets of 50 people each, calculating the mean height and comparing it with our distribution:
 
-<br>
-![Img_1](/images/confidence_intervals/img_5.png#center)
-{:.image-caption}
-*Red dashed lines — result of 100 repeatedly calculated mean heights by 50 random sampled people.*
-<br>
+| ![Img_1](/images/confidence_intervals/img_5.png#center) | 
+|:--:| 
+| *Red dashed lines — result of 100 repeatedly calculated mean heights by 50 random sampled people.* |
 
 But such expectations are sure to fail to meet the reality. As we can see, the number of measurements (red dashed lines) falling outside of the estimated 90% interval is way bigger than 10. The reason is that we have calculated our interval based on some random sample mean. 90% of the observations will fall within the estimated interval only if it matches with the true one. We can plot the true interval as we know the true parameters:
 
@@ -102,19 +97,16 @@ But such expectations are sure to fail to meet the reality. As we can see, the n
 ![Img_1](/images/confidence_intervals/eq_7.png#center)
 <br>
 
-<br>
-![Img_1](/images/confidence_intervals/img_6.png#center)
-{:.image-caption}
-*Red dashed lines — result of 100 estimations, the mean heights of 50 random people.*
-<br>
+| ![Img_1](/images/confidence_intervals/img_6.png#center) | 
+|:--:| 
+| *Red dashed lines — result of 100 estimations, the mean heights of 50 random people.* |
 
 But what will happen if we repeat our measurements and build a confidence interval for, say, 20 randomly sampled subsets of 50 people each? Here is what we will get:
 
-<br>
-![Img_1](/images/confidence_intervals/img_7.png#center)
-{:.image-caption}
-*Blue lines — 90% confidence intervals for 20 random samples of 50 people each. Red dashed line — the true mean.*
-<br>
+
+| ![Img_1](/images/confidence_intervals/img_7.png#center) | 
+|:--:| 
+| *Blue lines — 90% confidence intervals for 20 random samples of 50 people each. Red dashed line — the true mean.* |
 
 As one can see, 2 out of 20 confidence intervals do not include the true mean. Thus, if we continue conducting such an experiment, a chance that a given confidence interval will include the true parameter will tend to **90%**. That is what confidence level is all about. <br>
 
